@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me perdonas?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: 2px solid #b30cc5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background-color: #b30cc5;
+            color: #000000;
+        }
+        #noButton {
+            margin-right: 20px;
+        }
+        #yesButton {
+            width: 200px;
+            height: 50px; /* Agregado: ajusta el alto */
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Me perdonas?</h1>
+    <img src="https://media1.tenor.com/m/5Ux5jcrpkHoAAAAC/a-peck-on-the-cheeks-pudgy-penguins.gif" alt="Ositos o Tortugas">
+    <br><br>
+    <button id="yesButton" class="button" onclick="enlargeButton()">Sí</button>
+    <button id="noButton" class="button" onclick="moveButton()">No</button>
+
+    <script>
+        function moveButton() {
+            var noButton = document.getElementById("noButton");
+            var currentPosition = parseInt(noButton.style.marginLeft) || 0;
+            var newPosition = currentPosition + 40; // Cambiado: mover hacia la izquierda
+            noButton.style.marginLeft = newPosition + "px";
+
+            var yesButton = document.getElementById("yesButton");
+            var currentWidth = parseInt(window.getComputedStyle(yesButton).width);
+            var newWidth = currentWidth * 1.1; // Aumenta en un 10%
+            var currentHeight = parseInt(window.getComputedStyle(yesButton).height); // Agregado: obtén la altura actual
+            var newHeight = currentHeight * 1.1; // Aumenta en un 10%
+            yesButton.style.width = newWidth + "px";
+            yesButton.style.height = newHeight + "px"; // Agregado: ajusta la altura
+        }
+
+        function enlargeButton() {
+            var yesButton = document.getElementById("yesButton");
+            var currentWidth = parseInt(window.getComputedStyle(yesButton).width);
+            var newWidth = currentWidth * 1.1; // Aumenta en un 10%
+            var currentHeight = parseInt(window.getComputedStyle(yesButton).height); // Agregado: obtén la altura actual
+            var newHeight = currentHeight * 1.1; // Aumenta en un 10%
+            yesButton.style.width = newWidth + "px";
+            yesButton.style.height = newHeight + "px"; // Agregado: ajusta la altura
+        }
+    </script>
+</body>
+</html>
