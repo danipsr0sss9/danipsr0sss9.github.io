@@ -47,10 +47,12 @@
     <div id="thanksMessage"></div>
 
     <script>
-        function showMessage() {
-            var messageElement = document.getElementById("thanksMessage");
-            messageElement.textContent = "¡Gracias por creer!";
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('yesButton').addEventListener('click', function() {
+                var messageElement = document.getElementById("thanksMessage");
+                messageElement.textContent = "¡Gracias por perdonarme!";
+            });
+        });
         
         function moveButton() {
             var noButton = document.getElementById("noButton");
