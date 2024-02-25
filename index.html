@@ -57,25 +57,8 @@
             var currentPosition = parseInt(noButton.style.marginLeft) || 0;
             var newPosition = currentPosition + 40; // Cambiado: mover hacia la izquierda
             noButton.style.marginLeft = newPosition + "px";
-
-            var yesButton = document.getElementById("yesButton");
-            var currentWidth = parseInt(window.getComputedStyle(yesButton).width);
-            var newWidth = currentWidth * 1.1; // Aumenta en un 10%
-            var currentHeight = parseInt(window.getComputedStyle(yesButton).height); // Agregado: obtén la altura actual
-            var newHeight = currentHeight * 1.1; // Aumenta en un 10%
-            yesButton.style.width = newWidth + "px";
-            yesButton.style.height = newHeight + "px"; // Agregado: ajusta la altura
         }
 
-        function enlargeButton() {
-            var yesButton = document.getElementById("yesButton");
-            var currentWidth = parseInt(window.getComputedStyle(yesButton).width);
-            var newWidth = currentWidth * 1.1; // Aumenta en un 10%
-            var currentHeight = parseInt(window.getComputedStyle(yesButton).height); // Agregado: obtén la altura actual
-            var newHeight = currentHeight * 1.1; // Aumenta en un 10%
-            yesButton.style.width = newWidth + "px";
-            yesButton.style.height = newHeight + "px"; // Agregado: ajusta la altura
-        }
     </script>
 </body>
 </html>
