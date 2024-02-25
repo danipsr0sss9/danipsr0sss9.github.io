@@ -42,17 +42,15 @@
     <h1>¿Me perdonas?</h1>
     <img src="https://media1.tenor.com/m/5Ux5jcrpkHoAAAAC/a-peck-on-the-cheeks-pudgy-penguins.gif" alt="Ositos o Tortugas">
     <br><br>
-    <button id="yesButton" class="button" onclick="enlargeButton()">Sí</button>
+    <button id="yesButton" class="button" onclick="showMessage()">Sí</button>
     <button id="noButton" class="button" onclick="moveButton()">No</button>
     <div id="thanksMessage"></div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('yesButton').addEventListener('click', function() {
-                var messageElement = document.getElementById("thanksMessage");
-                messageElement.textContent = "¡Gracias por perdonarme!";
-            });
-        });
+        function showMessage() {
+            var messageElement = document.getElementById("thanksMessage");
+            messageElement.style.display = "block"; // Mostrar el mensaje
+        }
         
         function moveButton() {
             var noButton = document.getElementById("noButton");
