@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -45,14 +45,20 @@
     <br><br>
     <button id="yesButton" class="button" onclick="showMessage()">Sí</button>
     <button id="noButton" class="button" onclick="moveButton()">No</button>
-    <div id="thanksMessage">¡Gracias por CREER!</div>
+    <div id="thanksMessage">¡Gracias por creer en nuestro amor, te amo!</div>
 
     <script>
         function showMessage() {
+            console.log("Botón 'Sí' clicado.");
             var messageElement = document.getElementById("thanksMessage");
             messageElement.style.display = "block"; // Mostrar el mensaje
+
+            var yesButton = document.getElementById("yesButton");
+            var noButton = document.getElementById("noButton");
+
+            yesButton.style.display = "none"; // Ocultar botón Sí
+            noButton.style.display = "none"; // Ocultar botón No
         }
-        
         function moveButton() {
             var noButton = document.getElementById("noButton");
             var currentPosition = parseInt(noButton.style.marginLeft) || 0;
