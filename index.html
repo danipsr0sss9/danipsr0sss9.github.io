@@ -30,6 +30,11 @@
         #yesButton {
             width: 200px;
             height: 50px; /* Agregado: ajusta el alto */
+        }   
+        #thanksMessage {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #b30cc5;
         }
     </style>
 </head>
@@ -39,8 +44,14 @@
     <br><br>
     <button id="yesButton" class="button" onclick="enlargeButton()">Sí</button>
     <button id="noButton" class="button" onclick="moveButton()">No</button>
+    <div id="thanksMessage"></div>
 
     <script>
+        function showMessage() {
+            var messageElement = document.getElementById("thanksMessage");
+            messageElement.textContent = "¡Gracias por creer!";
+        }
+        
         function moveButton() {
             var noButton = document.getElementById("noButton");
             var currentPosition = parseInt(noButton.style.marginLeft) || 0;
